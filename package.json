@@ -1,6 +1,6 @@
 {
-  "name": "@hacxy.js/create-ts-app",
-  "version": "0.0.0",
+  "name": "@haxy/create-tsapp",
+  "version": "0.0.1",
   "type": "module",
   "author": "hacxy",
   "license": "MIT",
@@ -9,9 +9,12 @@
     "create-tsapp": "index.js",
     "cta": "index.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "index.js",
-    "dest",
+    "dist",
     "templates"
   ],
   "scripts": {
