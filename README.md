@@ -33,6 +33,7 @@ After execution, please follow the instructions to operate.
 You can also directly specify the project name and required project template through additional command line options. For example, to build a CLI project, run:
 
 ```sh
+# npm 7+, extra double-dash is needed:
 npm create ts-frame@latest my-cli-app -- --template cli
 
 # yarn
@@ -47,7 +48,7 @@ bun x create-ts-frame my-cli-app --template cli
 
 ## Plan & Support
 
-- [x] CLI
+- [x] CLI - see <https://github.com/hacxy/cli-template>
 - [ ] Vue
 - [ ] React
 - [ ] Taro
@@ -101,6 +102,7 @@ cnpm create ts-frame
 你还可以通过额外的命令行选项直接指定项目名称和需要的项目模板。例如，要搭建一个 CLI 项目，请运行：
 
 ```sh
+# npm 7+, 需要额外的双破折号:
 npm create ts-frame@latest my-cli-app -- --template cli
 
 # yarn
@@ -115,7 +117,7 @@ bun x create-ts-frame my-cli-app --template cli
 
 ## 计划&支持
 
-- [x] CLI
+- [x] CLI - 查阅 <https://github.com/hacxy/cli-template>
 - [ ] Vue
 - [ ] React
 - [ ] Taro
