@@ -7,7 +7,7 @@ This is a scaffolding tool used to quickly create starter project templates with
 With NPM:
 
 ```sh
-npm create ts-frame@@latest
+npm create ts-frame@latest
 ```
 
 With Yarn:
@@ -70,7 +70,7 @@ bun x create-ts-frame my-cli-app --template cli
 With NPM:
 
 ```sh
-npm create ts-frame@@latest
+npm create ts-frame@latest
 ```
 
 With Yarn:
