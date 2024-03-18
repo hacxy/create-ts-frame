@@ -25,7 +25,7 @@ pnpm create ts-frame
 With Bun:
 
 ```sh
-bun create ts-frame
+bun x create-ts-frame
 ```
 
 ## Plan & Support
@@ -70,7 +70,7 @@ pnpm create ts-frame
 With Bun:
 
 ```sh
-bun create ts-frame
+bun x create-ts-frame
 ```
 
 ## 计划&支持

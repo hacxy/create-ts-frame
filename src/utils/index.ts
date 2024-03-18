@@ -93,8 +93,12 @@ export function getPkgFromUserAgent(userAgent: string | undefined) {
   };
 }
 
-export const getPkgManager = () => {
+export const getPkgInfo = () => {
   const pkgInfo = getPkgFromUserAgent(process.env.npm_config_user_agent);
+  return pkgInfo;
+};
+export const getPkgManager = () => {
+  const pkgInfo = getPkgInfo();
   return pkgInfo ? pkgInfo.name : "npm";
 };
 

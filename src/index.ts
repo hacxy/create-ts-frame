@@ -17,8 +17,6 @@ import {
 const defaultTargetDir = "ts-project";
 let targetDir: string = defaultTargetDir;
 
-// console.log(getPkgManager());
-
 const bootstrap = async () => {
   const result = await prompts([
     {
