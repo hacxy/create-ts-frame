@@ -73,6 +73,12 @@ With Bun:
 bun x create-ts-frame
 ```
 
+国内用户可以使用 CNPM
+
+```sh
+cnpm create ts-frame
+```
+
 ## 计划&支持
 
 - [x] CLI

@@ -1,9 +1,12 @@
 import prompts from "prompts";
 import fs from "node:fs";
+import { isString } from "tianjie";
 import { cyan, red, reset } from "kolorist";
 import {
   cleanTargetDir,
   copy,
+  getArgTargetDir,
+  getArgTemplate,
   getProjectName,
   getRootDir,
   getTemplateDir,
@@ -15,12 +18,15 @@ import {
 } from "./utils";
 
 const defaultTargetDir = "ts-project";
-let targetDir: string = defaultTargetDir;
+let targetDir: string = getArgTargetDir() || defaultTargetDir;
+let template = getArgTemplate();
 
 const bootstrap = async () => {
   const result = await prompts([
     {
-      type: "text",
+      type: () => {
+        return targetDir ? null : "text";
+      },
       name: "projectName",
       message: "Project name:",
       initial: defaultTargetDir,
@@ -79,7 +85,9 @@ const bootstrap = async () => {
       validate: (dir) => isValidPackageName(dir) || "Invalid package.json name",
     },
     {
-      type: "select",
+      type: () => {
+        return template && isString(template) ? null : "select";
+      },
       name: "tsApp",
       message: "Typescript project template:",
       choices: [
@@ -88,12 +96,15 @@ const bootstrap = async () => {
           value: "cli",
         },
       ],
+      onState(state) {
+        template = state.value;
+      },
     },
   ]);
 
   if (result.overwrite === "yes") cleanTargetDir(targetDir);
 
-  copy(getTemplateDir(result.tsApp), getRootDir(targetDir));
+  copy(getTemplateDir(template!), getRootDir(targetDir));
 
   rename(targetDir, result.packageName || getProjectName(targetDir));
 

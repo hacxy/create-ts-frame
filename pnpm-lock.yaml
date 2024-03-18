@@ -35,6 +35,9 @@ devDependencies:
   release-it:
     specifier: ^17.1.1
     version: 17.1.1(typescript@5.4.2)
+  tianjie:
+    specifier: ^0.1.0
+    version: 0.1.0
   typescript:
     specifier: ^5.4.2
     version: 5.4.2
@@ -4442,6 +4445,10 @@ packages:
 
   /through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
+    dev: true
+
+  /tianjie@0.1.0:
+    resolution: {integrity: sha512-qCGj6O5faqUuxxPN77Lmnvl91uE3jCjOTEftlRFgvpLCRCvPvGa4Ljp9ZYfJMF1ahy1j2kzqnwftrisqhhW9SQ==}
     dev: true
 
   /tmp@0.0.33:
