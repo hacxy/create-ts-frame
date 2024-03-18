@@ -1,0 +1,36 @@
+{
+  "name": "cli-template",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "hacxy",
+  "license": "MIT",
+  "description": "",
+  "bin": {
+    "hello-cli": "index.js"
+  },
+  "files": [
+    "index.js",
+    "dest"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/prompts": "^2.4.9",
+    "cross-spawn": "^7.0.3",
+    "kolorist": "^1.8.0",
+    "minimist": "^1.2.8",
+    "prompts": "^2.4.2",
+    "typescript": "^5.4.2",
+    "unbuild": "^2.0.0"
+  }
+}
