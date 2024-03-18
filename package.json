@@ -1,13 +1,13 @@
 {
-  "name": "@haxy/create-tsapp",
-  "version": "1.0.0",
+  "name": "create-ts-frame",
+  "version": "0.0.0",
   "type": "module",
   "author": "hacxy",
   "license": "MIT",
   "description": "",
   "bin": {
-    "create-tsapp": "index.js",
-    "cta": "index.js"
+    "create-ts-frame": "index.js",
+    "ctf": "index.js"
   },
   "publishConfig": {
     "access": "public"
