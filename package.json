@@ -18,7 +18,8 @@
     "dev": "unbuild --stub",
     "build": "unbuild",
     "typecheck": "tsc --noEmit",
-    "sync-template": "node scripts/sync-template.js"
+    "sync-template": "node scripts/sync-template.js",
+    "release": "release-it"
   },
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
@@ -27,6 +28,7 @@
     "cli"
   ],
   "devDependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
     "@types/minimist": "^1.2.5",
     "@types/prompts": "^2.4.9",
     "cross-spawn": "^7.0.3",
@@ -34,6 +36,7 @@
     "kolorist": "^1.8.0",
     "minimist": "^1.2.8",
     "prompts": "^2.4.2",
+    "release-it": "^17.1.1",
     "typescript": "^5.4.2",
     "unbuild": "^2.0.0"
   }
