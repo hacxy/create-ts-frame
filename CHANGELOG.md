@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/hacxy/create-ts-frame/compare/v0.2.0...v0.2.1) (2024-04-06)
+
+
+### 🐛 Bug Fixes
+
+* 修复了执行脚手架时跳过了项目名称提示以及中断程序的正确处理 ([d287215](https://github.com/hacxy/create-ts-frame/commit/d2872156554b229d755d82c8448ea407a6f2b46f))
+
 ## [0.2.0](https://github.com/hacxy/create-ts-frame/compare/v0.1.0...v0.2.0) (2024-03-18)
 
 

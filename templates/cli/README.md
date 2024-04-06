@@ -4,20 +4,24 @@ This is a template for a typescript CLI application project that does not requir
 
 > requires Node.js version 18+, 20+
 
-## Usage
+## Craete
 
-### Create templates locally through degit
+- Use `create-ts-frame` to create a project locally
 
-- Install degit
-
-```sh
-npm install -g degit
-```
-
-- Create project
+When executing the creation command, you can specify the project name and template name through options.
 
 ```sh
-degit hacxy/cli-template my-cli-project
+# npm 7+, extra double-dash is needed:
+npm create ts-frame@latest my-cli-app -- --template cli
+
+# yarn
+yarn create ts-frame my-cli-app --template cli
+
+# pnpm
+pnpm create ts-frame my-cli-app --template cli
+
+# Bun
+bun x create-ts-frame my-cli-app --template cli
 ```
 
 ## Install dependencies.
@@ -63,20 +67,24 @@ Perform type checking for this project.
 
 > 需要 Node.js 版本 18+、20+
 
-## 使用方法
+## 创建
 
-### 通过 degit 在本地创建模板
+- 使用 `create-ts-frame` 创建项目至本地
 
-- 安装 degit
-
-```sh
-npm install -g degit
-```
-
-- 创建项目
+执行创建命令时可以通过选项指定项目名称和模板名称
 
 ```sh
-degit hacxy/cli-template my-cli-project
+# npm 7+, 需要额外的双破折号:
+npm create ts-frame@latest my-cli-app -- --template cli
+
+# yarn
+yarn create ts-frame my-cli-app --template cli
+
+# pnpm
+pnpm create ts-frame my-cli-app --template cli
+
+# Bun
+bun x create-ts-frame my-cli-app --template cli
 ```
 
 ## 安装依赖.
