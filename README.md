@@ -25,7 +25,7 @@ pnpm create ts-frame
 With Bun:
 
 ```sh
-bun x create-ts-frame
+bun create ts-frame
 ```
 
 After execution, please follow the instructions to operate.
@@ -43,7 +43,7 @@ yarn create ts-frame my-cli-app --template cli
 pnpm create ts-frame my-cli-app --template cli
 
 # Bun
-bun x create-ts-frame my-cli-app --template cli
+bun create ts-frame my-cli-app --template cli
 ```
 
 ## Plan & Support
@@ -68,7 +68,7 @@ bun x create-ts-frame my-cli-app --template cli
 
 # Create Ts Frame
 
-这是一个脚手架工具, 用于快速创建以 **Typescript** 为主要开发语言的起始项目模板, 模板包括但不限于 web 应用程序, 小程序, CLI 命令行工具, 小程序等.
+这是一个脚手架工具, 用于快速创建以 **Typescript** 为主要开发语言的起始项目模板, 模板包括但不限于 web 应用程序, 小程序, CLI 命令行工具以及其他更多项目模板.
 
 ## 使用
 
@@ -93,7 +93,7 @@ pnpm create ts-frame
 With Bun:
 
 ```sh
-bun x create-ts-frame
+bun create ts-frame
 ```
 
 国内用户可以使用 CNPM:
@@ -117,7 +117,7 @@ yarn create ts-frame my-cli-app --template cli
 pnpm create ts-frame my-cli-app --template cli
 
 # Bun
-bun x create-ts-frame my-cli-app --template cli
+bun create ts-frame my-cli-app --template cli
 ```
 
 ## 计划&支持
