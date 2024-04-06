@@ -48,12 +48,17 @@ bun x create-ts-frame my-cli-app --template cli
 
 ## Plan & Support
 
-- [x] CLI - see <https://github.com/hacxy/cli-template>
-- [ ] Vue
-- [ ] React
-- [ ] Taro
-- [ ] Nest
-- [ ] Uniapp
+- ✅ CLI - see <https://github.com/hacxy/cli-template>
+
+- 🚧 Vue
+
+- 🚧 React
+
+- 🚧 Taro
+
+- 🚧 Nest
+
+- 🚧 Uniapp
 
 ## License
 
