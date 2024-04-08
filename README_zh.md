@@ -2,6 +2,8 @@
 
 用于快速创建 **Typescript** 项目模板的脚手架工具。
 
+[English](https://github.com/hacxy/create-ts-frame) | 简体中文
+
 ## 使用
 
 使用 NPM：
@@ -31,9 +33,7 @@ bun create ts-frame
 国内用户可以使用 CNPM:
 
 ```sh
-
 cnpm create ts-frame
-
 ```
 
 执行后请按提示操作.
@@ -41,7 +41,6 @@ cnpm create ts-frame
 你还可以通过额外的命令行选项直接指定项目名称和需要的项目模板。例如，要搭建一个 CLI 项目，请运行：
 
 ```sh
-
 # npm 7+, 需要额外的双破折号:
 npm create ts-frame@latest my-cli-app -- --template cli-tsup
 

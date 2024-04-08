@@ -6,36 +6,28 @@ English | [简体中文](https://github.com/hacxy/create-ts-frame/blob/main/READ
 
 ## Use
 
-Use NPM:
+Use npm:
 
 ```sh
-
 npm create ts-frame@latest
-
 ```
 
-Use Yarn:
+Use yarn:
 
 ```sh
-
 yarn create ts-frame
-
 ```
 
-Use PNPM:
+Use pnpm:
 
 ```sh
-
 pnpm create ts-frame
-
 ```
 
-Use Bun:
+Use bun:
 
 ```sh
-
 bun create ts-frame
-
 ```
 
 Please follow the prompts after execution.
@@ -43,23 +35,17 @@ Please follow the prompts after execution.
 You can also directly specify the project name and the required project template through additional command-line options. For example, to build a CLI project, please run:
 
 ```sh
-
 # npm 7+, additional double dash is required:
-
 npm create ts-frame@latest my-cli-app -- --template cli-tsup
 
 # yarn:
-
 yarn create ts-frame my-cli-app --template cli-tsup
 
 # pnpm:
-
 pnpm create ts-frame my-cli-app --template cli-tsup
 
 # bun:
-
 bun create ts-frame my-cli-app --template cli-tsup
-
 ```
 
 ## Plan & Support
