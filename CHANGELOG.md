@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/hacxy/create-ts-frame/compare/v0.2.1...v0.3.0) (2024-04-08)
+
+
+### ✨ Features
+
+* 优化交互逻辑, 新增library模板 ([39fc734](https://github.com/hacxy/create-ts-frame/commit/39fc734b683c7f2a5747d5e30dd3760b9213a7e9))
+
 ## [0.2.1](https://github.com/hacxy/create-ts-frame/compare/v0.2.0...v0.2.1) (2024-04-06)
 
 
