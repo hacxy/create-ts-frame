@@ -2,7 +2,7 @@
 
 用于快速创建 **Typescript** 项目模板的脚手架工具。
 
-[English](https://github.com/hacxy/create-ts-frame) | 简体中文
+[English](https://github.com/hacxy/create-ts-frame?tab=readme-ov-file#-create-typescript-frame) | 简体中文
 
 ## 使用
 
