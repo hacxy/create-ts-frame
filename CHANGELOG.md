@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/hacxy/create-ts-frame/compare/v0.4.0...v0.4.1) (2024-04-08)
+
+
+### 🐛 Bug Fixes
+
+* 修复创建成功后提示信息cd命令的内容 ([f058656](https://github.com/hacxy/create-ts-frame/commit/f05865602b4a9103d28b1232d25049106c847e5f))
+
 ## [0.4.0](https://github.com/hacxy/create-ts-frame/compare/v0.3.0...v0.4.0) (2024-04-08)
 
 
