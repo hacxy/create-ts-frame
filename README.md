@@ -1,4 +1,4 @@
-# Create Ts Frame
+# 📦 Create Typescript Frame
 
 A scaffolding tool for quickly creating **Typescript** project templates.
 
@@ -66,14 +66,14 @@ bun create ts-frame my-cli-app --template cli-tsup
 
 The following is a variant of the CLI application project template.
 
-| Variat Name | Description                                                    | Template Warehouse                              |
-| ----------- | -------------------------------------------------------------- | ----------------------------------------------- |
-| tsup        | CLI application project template using tsup as a build tool    | <https://github.com/hacxy/cli-unbuild-template> |
-| unbuild     | CLI application project template using unbuild as a build tool | <https://github.com/hacxy/cli-unbuild-template> |
+| Variant Name | Description                                                    | Template Warehouse                              |
+| ------------ | -------------------------------------------------------------- | ----------------------------------------------- |
+| tsup         | CLI application project template using tsup as a build tool    | <https://github.com/hacxy/cli-unbuild-template> |
+| unbuild      | CLI application project template using unbuild as a build tool | <https://github.com/hacxy/cli-unbuild-template> |
 
 ### Library
 
-The following is a variant of the Library application project template.
+The following is a variant of the Library project template.
 
 | Variant Name | Description                        | Template Warehouse                                |
 | ------------ | ---------------------------------- | ------------------------------------------------- |

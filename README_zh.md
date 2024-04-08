@@ -1,4 +1,4 @@
-# Create Ts Frame
+# 📦 Create Typescript Frame
 
 用于快速创建 **Typescript** 项目模板的脚手架工具。
 
@@ -6,31 +6,31 @@
 
 ## 使用
 
-使用 NPM：
+使用 npm：
 
 ```sh
 npm create ts-frame@latest
 ```
 
-使用 Yarn：
+使用 yarn：
 
 ```sh
 yarn create ts-frame
 ```
 
-使用 PNPM：
+使用 pnpm：
 
 ```sh
 pnpm create ts-frame
 ```
 
-使用 Bun：
+使用 bun：
 
 ```sh
 bun create ts-frame
 ```
 
-国内用户可以使用 CNPM:
+国内用户可以使用 cnpm:
 
 ```sh
 cnpm create ts-frame
@@ -70,7 +70,7 @@ bun create ts-frame my-cli-app --template cli-tsup
 
 ### CLI Application
 
-以下是 CLI 应用程序项目模板的变体
+以下是 CLI 应用程序项目模板的变种
 
 | 变种名称 | 描述                                             | 模板仓库                                        |
 | -------- | ------------------------------------------------ | ----------------------------------------------- |
@@ -79,9 +79,9 @@ bun create ts-frame my-cli-app --template cli-tsup
 
 ### Library
 
-以下是 Library 应用程序项目模板的变体
+以下是 Library 项目模板的变种
 
-| 变体名称 | 描述           | 模板仓库                                          |
+| 变种名称 | 描述           | 模板仓库                                          |
 | -------- | -------------- | ------------------------------------------------- |
 | empty    | 空的库开发模板 | <https://github.com/hacxy/library-empty-template> |
 
