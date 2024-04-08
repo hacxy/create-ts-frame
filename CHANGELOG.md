@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/hacxy/create-ts-frame/compare/v0.3.0...v0.4.0) (2024-04-08)
+
+
+### ✨ Features
+
+* add cli template ([30b5b1d](https://github.com/hacxy/create-ts-frame/commit/30b5b1d69e07cfb6aed3d79d67b8d3b7607311e4))
+
 ## [0.3.0](https://github.com/hacxy/create-ts-frame/compare/v0.2.1...v0.3.0) (2024-04-08)
 
 
