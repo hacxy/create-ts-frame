@@ -9,6 +9,12 @@
         "title": "unbuild",
         "description": "CLI template using unbuild template",
         "repo": "hacxy/cli-unbuild-template"
+      },
+      {
+        "name": "cli-tsup",
+        "title": "tsup",
+        "description": "CLI template using tsup template",
+        "repo": "hacxy/cli-tsup-template"
       }
     ]
   },

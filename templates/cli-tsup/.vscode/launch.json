@@ -9,8 +9,7 @@
       "request": "launch",
       "name": "Launch CLI App",
       "skipFiles": ["<node_internals >/**"],
-      "preLaunchTask": "npm: debug",
-      "program": "${workspaceFolder}/out/index.mjs",
+      "program": "${workspaceFolder}/dist/index.cjs",
       "console": "integratedTerminal",
       "autoAttachChildProcesses": true
     },
@@ -19,8 +18,7 @@
       "request": "launch",
       "name": "Launch CLI App With Option",
       "skipFiles": ["<node_internals >/**"],
-      "preLaunchTask": "npm: debug",
-      "program": "${workspaceFolder}/out/index.mjs",
+      "program": "${workspaceFolder}/dist/index.cjs",
       "console": "integratedTerminal",
       "autoAttachChildProcesses": true,
       "args": ["--name", "hacxy"]

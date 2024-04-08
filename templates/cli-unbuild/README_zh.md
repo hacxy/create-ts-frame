@@ -18,16 +18,16 @@
 
 ```sh
 # npm 7+, 需要额外的双破折号:
-npm create ts-frame@latest my-cli-app -- --template cli
+npm create ts-frame@latest my-cli-app -- --template cli-unbuild
 
 # yarn
-yarn create ts-frame my-cli-app --template cli
+yarn create ts-frame my-cli-app --template cli-unbuild
 
 # pnpm
-pnpm create ts-frame my-cli-app --template cli
+pnpm create ts-frame my-cli-app --template cli-unbuild
 
 # Bun
-bun create ts-frame my-cli-app --template cli
+bun create ts-frame my-cli-app --template cli-unbuild
 ```
 
 ### 安装依赖
@@ -100,12 +100,7 @@ npm unlink -g
 
 - [ora](https://github.com/sindresorhus/ora) - 提供友好的 loading 动画效果 (需要以 Dependencies 安装)
 
-### 模板默认内置了以下这些第三方库:
-
-- [commander.js](https://github.com/tj/commander.js)
-- [kolorist](https://github.com/marvinhagemeister/kolorist)
-- [prompts](https://github.com/terkelg/prompts)
-- [ora](https://github.com/sindresorhus/ora)
+- [citty](https://github.com/unjs/citty) - 优雅的 CLI 构建器
 
 ### 依赖性说明
 

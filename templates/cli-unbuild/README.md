@@ -4,26 +4,30 @@ This is a CLI application project template with TypeScript as the main developme
 
 English | [简体中文](https://github.com/hacxy/cli-template/blob/main/README_zh.md)
 
-> requires Node.js version 18+, 20+
+## Prerequisites
 
-## Craete
+requires Node.js version 18+, 20+
 
-- Use `create-ts-frame` to create a project locally
+## Using Templates
+
+### Create Template Locally
+
+- You can quickly create a project locally using [create-ts-frame](https://github.com/hacxy/create-ts-frame)
 
 When executing the creation command, you can specify the project name and template name through options.
 
 ```sh
 # npm 7+, extra double-dash is needed:
-npm create ts-frame@latest my-cli-app -- --template cli
+npm create ts-frame@latest my-cli-app -- --template cli-unbuild
 
 # yarn
-yarn create ts-frame my-cli-app --template cli
+yarn create ts-frame my-cli-app --template cli-unbuild
 
 # pnpm
-pnpm create ts-frame my-cli-app --template cli
+pnpm create ts-frame my-cli-app --template cli-unbuild
 
 # Bun
-bun create ts-frame my-cli-app --template cli
+bun create ts-frame my-cli-app --template cli-unbuild
 ```
 
 ## Install dependencies.
@@ -33,30 +37,72 @@ cd my-cli-project
 npm install
 ```
 
-## Development
+### Development
 
-- dev
+By default, when you run `npm run dev`, [unbuild](https://github.com/unjs/unbuild) will be used to stub the `dist` folder. You can learn about this mode at [jiti](https://github.com/unjs/jiti). Even if you modify the code, there is no need to execute the `dev` command again or use other build tools' `watch` mode to recompile the `ts` code. When you need to modify the configuration of `unbuild`, you can do other configurations for it in the file named `build.config.ts`.
 
-Use [unbuild](https://github.com/unjs/unbuild) to stub the dist folder, without needing to watch and rebuild during development and output the .d.ts type declaration file. You can configure it through `build.config.ts`.
-
-To link the package globally, use `npm link`, then run `hello-cli` to preview the default content.
+- Development Mode
 
 ```sh
 npm run dev
 ```
 
-- build
+- Build Production Environment Code
 
 ```sh
 npm run build
 ```
 
-Build code for production environment
+- Output Build Artifacts with Sourcemap to Out Folder
 
-- typecheck
+```sh
+npm run build:out
+```
+
+- Type Check.
 
 ```sh
 npm run typecheck
 ```
 
-Perform type checking for this project.
+## Debugging Program Execution
+
+As I use VSCode to develop CLI applications, a corresponding debug configuration file `.vscode/launch.json` is provided. When you need to debug this project, first add breakpoints and then press F5 key to start Debugger mode. The Debugger mode will automatically exit when your CLI application finishes executing.
+
+> [!TIP]
+
+> When running in Debugger mode, artifacts used for debugging are outputted under directory 'out'. After that, your application will automatically start running.
+
+### Global Link Package:
+
+You can also create a global link for this package so that it's easier for you test or debug code using real environment:
+
+```sh
+npm link
+```
+
+Afterwards, you can execute command "hello-cli" at any path under all terminals of your operating system which corresponds with value of option "bin" in file "package.json" under this project.
+
+When you no longer need this global link anymore, manually remove it by executing below command under project directory:
+
+```sh
+npm unlink -g
+```
+
+## Solutions
+
+In order to facilitate smooth development of scaffold applications , I have thoughtfully supplemented some solutions that may be needed during scaffold application development . These third-party libraries can help achieve more powerful , practical and beautiful scaffold applications . They have been practically applied and tested in this project template , so feel free  to use them :
+
+- [commander.js](https://github.com/tj/commander.js) - Complete node.js command line solution .
+
+- [kolorist](https://github.com/marvinhagemeister/kolorist) - A micro-library that adds color support on standard input/output .
+
+- [prompts](https://github.com/terkelg/prompts) - Lightweight , beautiful and friendly interactive prompt tool .
+
+- [ora](https://github.com/sindresorhus/ora) - Provides friendly loading animation effects (requires installation as Dependencies)
+
+- [citty](https://github.com/unjs/citty) - Elegant CLI builder.
+
+### Dependency Description
+
+When your third-party library is installed as DevDependencies during development , these dependencies will be packaged into production environment codes after executing ' npm run build '. If program works abnormally after installing via such way and building completed afterwards , try installing them as production environment dependencies(Dependencies). They won't be packaged into production environment codes when installed as production environment dependencies.
