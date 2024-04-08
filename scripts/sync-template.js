@@ -1,16 +1,26 @@
 import degit from "degit";
-import fs from "node:fs";
+import fs from "fs-extra";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const templateConfigPath = path.resolve(__dirname, "../template.config.json");
+const templateConfig = fs.readJSONSync(templateConfigPath);
 
-const repoList = ["hacxy/cli-template"];
+let repoList = [];
 
-const cloner = (repo) => {
+templateConfig.map((templateItem) => {
+  if (templateItem?.items) {
+    repoList = [...repoList, ...templateItem.items];
+  } else {
+    repoList = [...repoList, templateItem];
+  }
+});
+
+const cloneTasks = (repoInfo) => {
   return new Promise((resolve) => {
-    const name = repo.split("/")[1].split("-")[0];
-    const emitter = degit(repo, {
+    const emitter = degit(repoInfo.repo, {
       cache: false,
       force: true,
       verbose: false,
@@ -20,21 +30,29 @@ const cloner = (repo) => {
       console.log(info.message);
     });
 
-    emitter.clone(`./templates/${name}`).then(() => {
+    emitter.clone(`./templates/${repoInfo.name}`).then(() => {
       const exisIgnoreFile = fs.existsSync(
-        path.resolve(__dirname, `../templates/${name}/.gitignore`)
+        path.resolve(__dirname, `../templates/${repoInfo.name}/.gitignore`)
       );
-      if (exisIgnoreFile)
-        fs.renameSync(
-          path.resolve(__dirname, `../templates/${name}/.gitignore`),
-          path.resolve(__dirname, `../templates/${name}/_gitignore`)
+
+      if (exisIgnoreFile) {
+        fs.rmSync(
+          path.resolve(
+            __dirname,
+            `../templates/${repoInfo.name}/pnpm-lock.yaml`
+          )
         );
+        fs.renameSync(
+          path.resolve(__dirname, `../templates/${repoInfo.name}/.gitignore`),
+          path.resolve(__dirname, `../templates/${repoInfo.name}/_gitignore`)
+        );
+      }
       resolve();
     });
   });
 };
 
 const main = () => {
-  Promise.all(repoList.map((repo) => cloner(repo)));
+  Promise.all(repoList.map((item) => cloneTasks(item)));
 };
 main();

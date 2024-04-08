@@ -1,15 +1,8 @@
 import minimist from "minimist";
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-export function isValidPackageName(projectName: string) {
-  return /^(?:@[a-z\d\-*~][a-z\d\-*._~]*\/)?[a-z\d\-~][a-z\d\-._~]*$/.test(
-    projectName
-  );
-}
+import { getTemplatePath } from "./path";
+import CONFIG from "../config";
 
 export function copyDir(srcDir: string, destDir: string) {
   fs.mkdirSync(destDir, { recursive: true });
@@ -55,10 +48,7 @@ export const getCwd = () => {
   return process.cwd();
 };
 
-export const getRootDir = (targetDir: string) => {
-  return path.join(getCwd(), targetDir);
-};
-
+// 处理选项和参数
 export const getArgv = () => {
   return minimist<{
     t?: string;
@@ -66,21 +56,15 @@ export const getArgv = () => {
   }>(process.argv.slice(2), { string: ["_"] });
 };
 
-export const getArgTargetDir = () => {
-  return formatTargetDir(getArgv()._[0]);
-};
-
-export const getArgTemplate = () => {
+// 获取命令选项参数中的模板名称
+export const getArgTemplateName = () => {
   const argv = getArgv();
   return argv.template || argv.t;
 };
 
-export const getTemplateRootDir = () => {
-  return path.resolve(__dirname, "../../templates/");
-};
-
-export const getTemplateDir = (templateName: string) => {
-  return path.resolve(getTemplateRootDir(), templateName);
+// 获取命令传入的目标文件夹名称
+export const getArgTargetDirName = (): string | undefined => {
+  return formatTargetDir(getArgv()._[0]);
 };
 
 export function getPkgFromUserAgent(userAgent: string | undefined) {
@@ -97,26 +81,26 @@ export const getPkgInfo = () => {
   const pkgInfo = getPkgFromUserAgent(process.env.npm_config_user_agent);
   return pkgInfo;
 };
+
 export const getPkgManager = () => {
   const pkgInfo = getPkgInfo();
   return pkgInfo ? pkgInfo.name : "npm";
 };
 
-export const rename = (targetDir: string, packageName: string) => {
-  const targetPath = path.join(getRootDir(targetDir));
+export const rename = (targetDirPath: string, packageName: string) => {
   fs.renameSync(
-    path.resolve(targetPath, "_gitignore"),
-    path.resolve(targetPath, ".gitignore")
+    path.resolve(targetDirPath, "_gitignore"),
+    path.resolve(targetDirPath, ".gitignore")
   );
 
   const pkg = JSON.parse(
-    fs.readFileSync(path.resolve(targetDir, "package.json"), "utf-8")
+    fs.readFileSync(path.resolve(targetDirPath, "package.json"), "utf-8")
   );
 
   pkg.name = packageName;
 
   fs.writeFileSync(
-    path.resolve(targetDir, "package.json"),
+    path.resolve(targetDirPath, "package.json"),
     JSON.stringify(pkg, null, 2) + "\n"
   );
 };
@@ -138,6 +122,39 @@ export const printActionsInfo = (targetDir: string) => {
   console.log();
 };
 
-export const cleanTargetDir = (targetDir: string) => {
-  fs.rmSync(getRootDir(targetDir), { force: true, recursive: true });
+export const cleanTargetDir = (path: string) => {
+  fs.rmSync(path, { force: true, recursive: true });
+};
+
+export const handleTemplatePromptsSelectChoices = (variantItems?: any[]) => {
+  const tempConfig = variantItems || CONFIG.templateConfig;
+  return tempConfig.map((templateItem) => {
+    return {
+      title: templateItem.title,
+      description: templateItem.description,
+      value: {
+        path: getTemplatePath(templateItem.name),
+        name: templateItem.name,
+        variant: templateItem.items,
+      },
+    };
+  });
+};
+
+export const flatTemplateConfig = () => {
+  let finalTemplateConfig: any = [];
+  CONFIG.templateConfig.forEach((item) => {
+    if (item.items) {
+      finalTemplateConfig = [...finalTemplateConfig, item, ...item.items];
+    } else {
+      finalTemplateConfig.push(item);
+    }
+  });
+
+  return finalTemplateConfig;
+};
+
+export const findTemplateByName = (name: string) => {
+  const config = flatTemplateConfig();
+  return config.find((item: any) => item.name === name);
 };

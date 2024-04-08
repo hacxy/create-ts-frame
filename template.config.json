@@ -1,0 +1,28 @@
+[
+  {
+    "name": "cli",
+    "title": "cli",
+    "description": "Typescript CLI templates.",
+    "items": [
+      {
+        "name": "cli-unbuild",
+        "title": "unbuild",
+        "description": "CLI template using unbuild template",
+        "repo": "hacxy/cli-unbuild-template"
+      }
+    ]
+  },
+  {
+    "name": "library",
+    "title": "library",
+    "description": "Typescript library templates.",
+    "items": [
+      {
+        "name": "library-empty",
+        "title": "empty",
+        "description": "Using Vite as a build tool, an empty library project.",
+        "repo": "hacxy/library-empty-template"
+      }
+    ]
+  }
+]

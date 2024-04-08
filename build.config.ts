@@ -4,11 +4,11 @@ export default defineBuildConfig({
   entries: [
     "src/index",
     // rollup builder transpiles file-to-file keeping original sources structure
-    {
-      builder: "rollup",
-      input: "./src/utils/index",
-      outDir: "./dist/utils",
-    },
+    // {
+    //   builder: "mkdist",
+    //   input: "./src/templates",
+    //   outDir: "./dist/",
+    // },
   ],
   clean: true,
 
@@ -17,7 +17,6 @@ export default defineBuildConfig({
 
   // Change outDir, default is 'dist'
   outDir: "dist",
-
   rollup: {
     inlineDependencies: true,
     esbuild: {
