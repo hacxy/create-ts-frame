@@ -75,9 +75,9 @@ The following is a variant of the CLI application project template.
 
 The following is a variant of the Library application project template.
 
-| Variat Name | Description                        | Template Warehouse                                |
-| ----------- | ---------------------------------- | ------------------------------------------------- |
-| empty       | Empty library development template | <https://github.com/hacxy/library-empty-template> |
+| Variant Name | Description                        | Template Warehouse                                |
+| ------------ | ---------------------------------- | ------------------------------------------------- |
+| empty        | Empty library development template | <https://github.com/hacxy/library-empty-template> |
 
 ## License
 

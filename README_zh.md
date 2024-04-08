@@ -72,7 +72,7 @@ bun create ts-frame my-cli-app --template cli-tsup
 
 以下是 CLI 应用程序项目模板的变体
 
-| 变体名称 | 描述                                             | 模板仓库                                        |
+| 变种名称 | 描述                                             | 模板仓库                                        |
 | -------- | ------------------------------------------------ | ----------------------------------------------- |
 | tsup     | 使用 tsup 作为构建工具的 CLI 应用程序项目模板    | <https://github.com/hacxy/cli-unbuild-template> |
 | unbuild  | 使用 unbuild 作为构建工具的 CLI 应用程序项目模板 | <https://github.com/hacxy/cli-unbuild-template> |
