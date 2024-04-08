@@ -17,7 +17,7 @@ const bootstrap = async () => {
   if (result.overwrite === "yes") cleanTargetDir(result.projectTargetInfo.path);
   copy(result.templateInfo.path, result.projectTargetInfo.path);
   rename(result.projectTargetInfo.path, result.projectTargetInfo.projectName);
-  printActionsInfo(result.projectTargetInfo.path);
+  printActionsInfo(result.projectTargetInfo.dirName);
 };
 
 bootstrap();
