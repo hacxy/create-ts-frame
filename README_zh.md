@@ -81,9 +81,10 @@ bun create ts-frame my-cli-app --template cli-tsup
 
 以下是 Library 项目模板的变种
 
-| 变种名称 | 描述           | 模板仓库                                          |
-| -------- | -------------- | ------------------------------------------------- |
-| empty    | 空的库开发模板 | <https://github.com/hacxy/library-empty-template> |
+| 变种名称 | 描述                     | 模板仓库                                             |
+| -------- | ------------------------ | ---------------------------------------------------- |
+| empty    | 空的库开发模板           | <https://github.com/hacxy/library-empty-template>    |
+| complete | 具有完整设施的库开发模板 | <https://github.com/hacxy/library-complete-template> |
 
 ## 许可证
 
