@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/hacxy/create-ts-frame/compare/v0.4.1...v0.5.0) (2024-04-12)
+
+
+### ✨ Features
+
+* 新增library-complete-template ([c12acbf](https://github.com/hacxy/create-ts-frame/commit/c12acbfad48e22e5c62b95376d366ae4e0666d68))
+
 ## [0.4.1](https://github.com/hacxy/create-ts-frame/compare/v0.4.0...v0.4.1) (2024-04-08)
 
 
