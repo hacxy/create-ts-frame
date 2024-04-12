@@ -10,6 +10,14 @@ const templateConfig = fs.readJSONSync(templateConfigPath);
 
 let repoList = [];
 
+// 判断文件是否存在
+const exisFile = (temlateName, fileName) => {
+  const isExisFile = fs.existsSync(
+    path.resolve(__dirname, `../templates/${temlateName}/${fileName}`)
+  );
+  return isExisFile;
+};
+
 templateConfig.map((templateItem) => {
   if (templateItem?.items) {
     repoList = [...repoList, ...templateItem.items];
@@ -31,17 +39,25 @@ const cloneTasks = (repoInfo) => {
     });
 
     emitter.clone(`./templates/${repoInfo.name}`).then(() => {
-      const exisIgnoreFile = fs.existsSync(
-        path.resolve(__dirname, `../templates/${repoInfo.name}/.gitignore`)
-      );
-
-      if (exisIgnoreFile) {
+      if (exisFile(repoInfo.name, "pnpm-lock.yaml")) {
         fs.rmSync(
           path.resolve(
             __dirname,
             `../templates/${repoInfo.name}/pnpm-lock.yaml`
           )
         );
+      }
+
+      if (exisFile(repoInfo.name, "package-lock.json")) {
+        fs.rmSync(
+          path.resolve(
+            __dirname,
+            `../templates/${repoInfo.name}/package-lock.json`
+          )
+        );
+      }
+
+      if (exisFile(repoInfo.name, ".gitignore")) {
         fs.renameSync(
           path.resolve(__dirname, `../templates/${repoInfo.name}/.gitignore`),
           path.resolve(__dirname, `../templates/${repoInfo.name}/_gitignore`)

@@ -28,6 +28,12 @@
         "title": "empty",
         "description": "Using Vite as a build tool, an empty library project.",
         "repo": "hacxy/library-empty-template"
+      },
+      {
+        "name": "library-complete",
+        "title": "complete",
+        "description": "Built with Vite, a JavaScript library development template with complete infrastructure.",
+        "repo": "hacxy/library-complete-template"
       }
     ]
   }

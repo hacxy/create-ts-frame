@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "tsup --watch --sourcemap",
-    "build": "tsup"
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "cli"

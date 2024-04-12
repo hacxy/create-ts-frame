@@ -20,7 +20,7 @@
     "dev": "unbuild --stub",
     "build": "unbuild",
     "typecheck": "tsc --noEmit",
-    "sync-template": "node scripts/sync-template.js",
+    "sync-template": "rimraf templates && node scripts/sync-template.js",
     "release": "release-it"
   },
   "engines": {
@@ -42,6 +42,7 @@
     "minimist": "^1.2.8",
     "prompts": "^2.4.2",
     "release-it": "^17.1.1",
+    "rimraf": "^5.0.5",
     "tianjie": "^0.1.0",
     "typescript": "^5.4.2",
     "unbuild": "^2.0.0"
