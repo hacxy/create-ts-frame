@@ -88,20 +88,6 @@ npm link
 npm unlink -g
 ```
 
-## 解决方案
-
-为了方便您顺利的开发脚手架应用程序, 我还贴心的为您补充了一些在脚手架应用程序开发中, 您可能需要的解决方案, 这些第三方库可以帮助您实现更强大更实用更美观的脚手架应用程序, 它们都经过了此项目模板的实际应用和测试, 您可以放心的使用:
-
-- [commander.js](https://github.com/tj/commander.js) - 完整的 node.js 命令行解决方案。
-
-- [kolorist](https://github.com/marvinhagemeister/kolorist) - 将颜色添加到标准输入/输出的微型库
-
-- [prompts](https://github.com/terkelg/prompts) - 轻巧、美观且友好的交互提示工具
-
-- [ora](https://github.com/sindresorhus/ora) - 提供友好的 loading 动画效果 (需要以 Dependencies 安装)
-
-- [citty](https://github.com/unjs/citty) - 优雅的 CLI 构建器
-
 ### 依赖性说明
 
 当您的第三方库以开发时依赖 (DevDependencies) 进行安装时, 执行`npm run build` 会将这些依赖打包进生产环境代码中, 如果您使用此方式安装并构建完成后, 发现程序工作异常, 则应该尝试将其作为生产环境依赖 (Dependencies) 进行安装, 当作为生产环境依赖进行安装时, 它们不会被打包进生产环境代码中.

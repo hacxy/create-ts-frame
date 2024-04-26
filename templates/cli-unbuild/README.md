@@ -89,20 +89,6 @@ When you no longer need this global link anymore, manually remove it by executin
 npm unlink -g
 ```
 
-## Solutions
-
-In order to facilitate smooth development of scaffold applications , I have thoughtfully supplemented some solutions that may be needed during scaffold application development . These third-party libraries can help achieve more powerful , practical and beautiful scaffold applications . They have been practically applied and tested in this project template , so feel free  to use them :
-
-- [commander.js](https://github.com/tj/commander.js) - Complete node.js command line solution .
-
-- [kolorist](https://github.com/marvinhagemeister/kolorist) - A micro-library that adds color support on standard input/output .
-
-- [prompts](https://github.com/terkelg/prompts) - Lightweight , beautiful and friendly interactive prompt tool .
-
-- [ora](https://github.com/sindresorhus/ora) - Provides friendly loading animation effects (requires installation as Dependencies)
-
-- [citty](https://github.com/unjs/citty) - Elegant CLI builder.
-
 ### Dependency Description
 
 When your third-party library is installed as DevDependencies during development , these dependencies will be packaged into production environment codes after executing ' npm run build '. If program works abnormally after installing via such way and building completed afterwards , try installing them as production environment dependencies(Dependencies). They won't be packaged into production environment codes when installed as production environment dependencies.
