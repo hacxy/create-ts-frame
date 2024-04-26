@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.5](https://github.com/hacxy/create-ts-frame/compare/v0.5.4...v0.5.5) (2024-04-26)
+
+
+### 🐛 Bug Fixes
+
+* **template:** 更新模板 ([96f4ca2](https://github.com/hacxy/create-ts-frame/commit/96f4ca29c64e39b5b87fbc94fd4fbe2bcfd96024))
+
 ## [0.5.4](https://github.com/hacxy/create-ts-frame/compare/v0.5.3...v0.5.4) (2024-04-25)
 
 
