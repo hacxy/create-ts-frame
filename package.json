@@ -2,9 +2,21 @@
   "name": "create-ts-frame",
   "version": "0.5.6",
   "type": "module",
-  "author": "hacxy",
+  "author": {
+    "name": "hacxy",
+    "email": "hacxy.js@outlook.com",
+    "url": "https://github.com/hacxy"
+  },
   "license": "MIT",
   "description": "",
+  "homepage": "https://github.com/hacxy/create-ts-frame",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hacxy/create-ts-frame.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hacxy/create-ts-frame/issues"
+  },
   "bin": {
     "create-ts-frame": "dist/index.mjs",
     "ctf": "dist/index.mjs"
