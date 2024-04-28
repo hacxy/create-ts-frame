@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-
-const bootstrap = async () => {
+const bootstrap = () => {
   console.log(`🥳 Welcome to use the CLI Unbuild Template!`);
 };
 
