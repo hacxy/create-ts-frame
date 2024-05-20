@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/hacxy/create-ts-frame/compare/v0.5.7...v0.6.0) (2024-05-20)
+
+
+### ✨ Features
+
+* **template:** add ink template ([2a845fc](https://github.com/hacxy/create-ts-frame/commit/2a845fc66d0df38ac8c391c3a52bd40fca37e911))
+
 ## [0.5.7](https://github.com/hacxy/create-ts-frame/compare/v0.5.6...v0.5.7) (2024-04-28)
 
 
