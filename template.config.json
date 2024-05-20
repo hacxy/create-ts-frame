@@ -5,6 +5,12 @@
     "description": "Typescript CLI templates.",
     "items": [
       {
+        "name": "cli-ink",
+        "title": "ink",
+        "description": "CLI template for ink",
+        "repo": "hacxy/cli-ink-template"
+      },
+      {
         "name": "cli-unbuild",
         "title": "unbuild",
         "description": "CLI template using unbuild template",
