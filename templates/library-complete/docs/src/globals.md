@@ -1,8 +1,12 @@
-**library-complete-template** • [Readme](README.md) \| API
+[**library-complete-template**](README.md) • **Docs**
 
 ***
 
 # library-complete-template
+
+## 函数
+
+- [addition](functions/addition.md)
 
 ## 工具函数
 

@@ -4,8 +4,8 @@ import {Box, Text, useApp, useInput} from 'ink';
 export default function App() {
 	const {exit} = useApp();
 
-	useInput(input => {
-		if (input === 'q') {
+	useInput((input, key) => {
+		if (input === 'q' || key.escape) {
 			exit();
 		}
 	});
